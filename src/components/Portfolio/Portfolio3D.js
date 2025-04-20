@@ -212,6 +212,45 @@ const BackgroundElements = ({ count = 20, positionOffset = [0, 0, 0], scale = 1 
   );
 };
 
+// Simplified version without responsiveness if needed
+const SectionBackgroundElements = ({ section }) => {
+  return (
+    <>
+      <ambientLight intensity={0.4} />
+      <directionalLight 
+        position={[5, 5, 5]} 
+        intensity={0.8} 
+        color={
+          section === 'about' ? "#00ff77" :
+          section === 'projects' ? "#ff5577" :
+          section === 'skills' ? "#00aaff" :
+          "#aaff00"
+        }
+      />
+      
+      <mesh position={[0, 0, -8]} rotation={[0, 0, 0]}>
+        <sphereGeometry args={[5, 16, 16]} />
+        <meshBasicMaterial 
+          color={
+            section === 'about' ? "#003311" :
+            section === 'projects' ? "#330011" :
+            section === 'skills' ? "#001133" :
+            "#113300"
+          }
+          transparent
+          opacity={0.5}
+        />
+      </mesh>
+      
+      <BackgroundElements 
+        count={10} 
+        scale={1.2} 
+        positionOffset={[0, 0, -5]} 
+      />
+    </>
+  );
+};
+
 // Intro scene
 const IntroScene = ({ onStart }) => {
   const titleRef = useRef();

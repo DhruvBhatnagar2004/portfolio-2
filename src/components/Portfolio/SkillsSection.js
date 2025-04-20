@@ -74,7 +74,7 @@ const SkillsSection = ({ isMobile }) => {
         {/* Terminal header with simplified display on mobile */}
         <div className="absolute top-0 left-0 right-0 bg-green-900/50 text-green-300 text-xs px-2 py-1 flex justify-between">
           <span>skill-analyzer.exe</span>
-          <span className={isMobile ? "hidden" : "opacity-60"}>/* scanning */</span>
+          <span className={isMobile ? "hidden" : "opacity-60"}>scanning...</span>
         </div>
         
         <div className={`${isMobile ? "pt-4 space-y-2" : "pt-6 space-y-4"} font-mono`}>

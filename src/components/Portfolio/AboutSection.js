@@ -48,8 +48,7 @@ const AboutSection = ({ isMobile }) => {
       <div className="mt-8 border border-green-600 p-4 bg-black/50 relative overflow-hidden">
         {/* Terminal header */}
         <div className="absolute top-0 left-0 right-0 bg-green-900/50 text-green-300 text-xs px-2 py-1 flex justify-between">
-          <span>developer.js</span>
-          <span className={isMobile ? "hidden" : "opacity-60"}>/* initializing profile */</span>
+          <span className={isMobile ? "hidden" : "opacity-60"}>{/* initializing profile */}</span>
         </div>
         
         <pre className={`text-xs text-green-400 pt-6 font-mono ${isMobile ? "text-[0.65rem] overflow-x-auto" : ""}`}>
